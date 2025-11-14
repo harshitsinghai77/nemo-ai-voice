@@ -1,0 +1,11 @@
+python-dotenv
+fastapi
+uvicorn
+websockets == 13.1
+pipecat-ai[aws, webrtc,aws-nova-sonic,silero, deepgram,cartesia]
+boto3
+markdownify == 1.2.0
+PyGithub == 2.8.1
+strands-agents == 1.15.0
+rich == 14.1.0
+
