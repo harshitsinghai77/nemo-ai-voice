@@ -10,22 +10,20 @@
 4. Automated Workflow: Creates and populates final Jira stories automatically after planning is complete.
 5. Planner Proposals (WIP): Agent proposes structured plans and ask questions to help user finalize the plan.
 
-## Repository Layout (after refactor)
+## Repository Layout
 
 ```
 /backend   – FastAPI server, Pipecat pipeline, custom & integration tools
-/frontend  – React app (Vite/C-RA) with shadcn/ui & Pipecat React SDK
-/docs      – Additional docs & diagrams (optional)
-.env       – Local environment variables (**never commit secrets**)
+/frontend  – React app (Vite/C-RA)
 Dockerfile – Container build for backend + frontend
 ```
 
 ## Key Technologies
 
-- **Python / FastAPI** – REST & WebSocket backend, Pipecat orchestration
-- **React 18 + shadcn/ui** – Lightweight, modern UI components
-- **Pipecat SDK** – Client & server transports, audio handling
-- **AWS & Deepgram** – Example STT/TTS services (pluggable)
+- Python / FastAPI – REST & WebSocket backend, Pipecat orchestration
+- React – Lightweight, modern UI components
+- Pipecat SDK – Client & server transports, audio handling
+- AWS - Bedrock, Polly, Transcribe
 
 ## Quick Start
 
@@ -50,7 +48,7 @@ Open `http://localhost:5173` (or shown dev URL). The React app will connect to t
 | `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` | S3 / Polly / Transcribe (example) |
 | `DEEPGRAM_API_KEY` | Speech-to-Text service |
 | `CARTESIA_TTS_API_KEY` | Text-to-Speech voice |
-| `ATLASSIAN_API_TOKEN`, `ATLASSIAN_EMAIL` | Jira / Confluence integration |
+| `ATLASSIAN_API_TOKEN`, `ATLASSIAN_EMAIL`, `JIRA_BASE_URL` | Jira / Confluence integration |
 | `GITHUB_PERSONAL_ACCESS_TOKEN` | GitHub cloning actions |
 
 Create a local `.env` with these values or inject via your deployment platform.
